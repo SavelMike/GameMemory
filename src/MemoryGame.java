@@ -49,17 +49,17 @@ public class MemoryGame {
     public static void displayArray(int[] pairDigits, int[] opened, int ind1, int ind2)
     {
         for (int i = 0; i < pairDigits.length; i++) {
-            /* method prints . if related element of array opened equals 0 and actual element doesn't match indexes.*/
-            if () {
-
+            /* method prints . if correspondent element of array opened equals 0 and actual element's index is not equal indexes.*/
+            if ((opened[i] == 0) && (i != ind1) && (i != ind2)) {
+                System.out.println(".");
             }
-            /* method prints () if related element doesn't equal 0 */
-            if () {
-
+            /* method prints braces if correspondent element doesn't equal 0 */
+            if (opened[i] != 0) {
+                System.out.println("(" + pairDigits[i] + ")");
             }
-            /* method prints without () if related element equals 0 and index of element matches with argument indexes */
-            if () {
-                
+            /* method prints without braces if correspondent element equals 0 and index of element matches with argument indexes */
+            if ((opened[i] == 0) && (i == ind1) || (i == ind2)) {
+                System.out.println(pairDigits[i]);
             }
 
         }
