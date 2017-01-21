@@ -8,10 +8,11 @@ public class MemoryGame {
      *
      * @param args
      */
-    public static void main(String[] args) {
-        /* 1) create 2 arrays and fill them (call method fillArray());
-        *  2) game loop
-        */
+    public static void main(String[] args)
+    {
+        /* 1) create 2 arrays and fill them (call method fillArray()); */
+
+        /*  2) game loop; */
         while (isGameOver() == false) {
             /* ask user 2 index */
             System.out.println();
@@ -23,6 +24,7 @@ public class MemoryGame {
 
     /**
      * Fill first array with pair digits, fill second array opened with zeroes;
+     *
      * @param pairDigits
      * @param opened
      */
@@ -49,6 +51,7 @@ public class MemoryGame {
      */
     public static boolean isGameOver(int[] opened)
     {
+        return;
     }
 }
 
