@@ -17,8 +17,12 @@ public class MemoryGame {
             /* ask user 2 index */
             System.out.println();
 
+            /* process game*/
+            checkPlayerGuess();
+
             /* print an array */
             displayArray();
+
         }
     }
 
@@ -81,15 +85,18 @@ public class MemoryGame {
 
     /**
      * process If correspondent elements are equal, change element from opened to 1. Otherwise print error message.
+     *
      * @param opened
      * @param ind1
      * @param ind2
+     * @param pairDigits;
      */
     public static void checkPlayerGuess(int[] pairDigits, int[] opened, int ind1, int ind2)
     {
         if (pairDigits[ind1] == pairDigits[ind2]) {
             opened[ind1] = 1;
             opened[ind2] = 1;
+            System.out.println("Yeah! You found a pair");
         } else {
             System.out.println("No, " + pairDigits[ind1] + " and" + pairDigits[ind2] + " is not a memory pair");
         }
