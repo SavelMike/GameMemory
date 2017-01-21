@@ -70,25 +70,27 @@ public class MemoryGame {
      */
     public static void displayArray(int[] pairDigits, int[] opened, int ind1, int ind2)
     {
+        System.out.print("[");
         for (int i = 0; i < pairDigits.length; i++) {
             /* method prints . if correspondent element of array opened equals 0 and actual element's index is not equal indexes.*/
             if ((opened[i] == 0) && (i != ind1) && (i != ind2)) {
-                System.out.print(".");
+                System.out.print(" .");
                 continue;
             }
             /* method prints braces if correspondent element doesn't equal 0 */
             if (opened[i] != 0) {
-                System.out.print("(" + pairDigits[i] + ")");
+                System.out.print(" (" + pairDigits[i] + ")");
                 continue;
             }
             /* method prints without braces if correspondent element equals 0 and index of element matches with argument indexes */
             if ((opened[i] == 0) && ((i == ind1) || (i == ind2))) {
-                System.out.print(pairDigits[i]);
+                System.out.print(" " + pairDigits[i]);
                 continue;
             }
-            System.out.println("------------------------------------------------------");
 
         }
+        System.out.println(" ]");
+        System.out.println("------------------------------------------------------");
     }
 
     /**
@@ -123,7 +125,7 @@ public class MemoryGame {
             opened[ind2] = 1;
             System.out.println("Yeah! You found a pair");
         } else {
-            System.out.println("No, " + pairDigits[ind1] + " and" + pairDigits[ind2] + " is not a memory pair");
+            System.out.println("No, " + pairDigits[ind1] + " and " + pairDigits[ind2] + " is not a memory pair");
         }
     }
 }
