@@ -48,6 +48,21 @@ public class MemoryGame {
      */
     public static void displayArray(int[] pairDigits, int[] opened, int ind1, int ind2)
     {
+        for (int i = 0; i < pairDigits.length; i++) {
+            /* method prints . if related element of array opened equals 0 and actual element doesn't match indexes.*/
+            if () {
+
+            }
+            /* method prints () if related element doesn't equal 0 */
+            if () {
+
+            }
+            /* method prints without () if related element equals 0 and index of element matches with argument indexes */
+            if () {
+                
+            }
+
+        }
     }
 
     /**
