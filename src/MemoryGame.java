@@ -25,10 +25,10 @@ public class MemoryGame {
             int ind1 = sc.nextInt();
             System.out.println("Please enter index 2:");
             int ind2 = sc.nextInt();
-            if ((ind1 > 7) && (ind1 < 0)) {
+            if ((ind1 > 7) || (ind1 < 0)) {
                 continue;
             }
-            if ((ind2 > 7) && (ind2 < 0) && (ind2 == ind1)) {
+            if ((ind2 > 7) || (ind2 < 0) || (ind2 == ind1)) {
                 continue;
             }
             /* process game*/
@@ -38,8 +38,6 @@ public class MemoryGame {
 
             /* print an array */
             displayArray(pairDigits, opened, ind1, ind2);
-
-
         }
     }
 
