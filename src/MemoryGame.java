@@ -4,13 +4,14 @@
 public class MemoryGame {
 
     /**
-     * 1) create 2 arrays and fill them (call method fillArray());
-     *
+     * The memory game
      * @param args
      **/
     public static void main(String[] args)
     {
+        /* 1) create 2 arrays and fill them (call method fillArray());
 
+         */
         /* 2 game loop */
         while (isGameOver() == false) {
             /* ask user 2 index */
@@ -22,32 +23,30 @@ public class MemoryGame {
 
 
     /**
-     *  1) Create array with pair digits, fill second array opened with zeroes;
+     *  1) Fill first array with pair digits, fill second array opened with zeroes;
      *  2) 2 arrays are parameters
      **/
-    public static void fillArray(int[] Array, int[] opened)
+    public static void fillArray(int[] pairDigits, int[] opened)
     {
     }
 
     /**
-     * 2) Display array;  user's index for array
-     * @param Array
+     * Display array
+     * @param pairDigits
      * @param ind1 index of opened element
      * @param ind2 index of opened element
      * @param opened
      */
-    public static void displayArray((int[] Array, int ind1, int ind2, int[] opened))
+    public static void displayArray(int[] pairDigits, int[] opened, int ind1, int ind2)
     {
     }
 
     /**
-     * If array opened doesn't contain 0;
+     * If array opened doesn't contain 0 return true, otherwise return false;
      * @param opened
      */
-    public static void isGameOver(int[] opened)
+    public static boolean isGameOver(int[] opened)
     {
     }
-}
 
 
-}
