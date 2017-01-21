@@ -30,6 +30,12 @@ public class MemoryGame {
      */
     public static void fillArray(int[] pairDigits, int[] opened)
     {
+        for (int i = 0; i < pairDigits.length; i++) {
+            pairDigits[i] = i/2 + 1;
+        }
+        for (int i = 0; i < opened.length; i++) {
+            opened[i] = 0;
+        }
     }
 
     /**
