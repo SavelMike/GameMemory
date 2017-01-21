@@ -16,6 +16,7 @@ public class MemoryGame {
         while (isGameOver() == false) {
             /* ask user 2 index */
             System.out.println();
+
             /* print an array */
             displayArray();
         }
@@ -52,14 +53,17 @@ public class MemoryGame {
             /* method prints . if correspondent element of array opened equals 0 and actual element's index is not equal indexes.*/
             if ((opened[i] == 0) && (i != ind1) && (i != ind2)) {
                 System.out.println(".");
+                continue;
             }
             /* method prints braces if correspondent element doesn't equal 0 */
             if (opened[i] != 0) {
                 System.out.println("(" + pairDigits[i] + ")");
+                continue;
             }
             /* method prints without braces if correspondent element equals 0 and index of element matches with argument indexes */
-            if ((opened[i] == 0) && (i == ind1) || (i == ind2)) {
+            if ((opened[i] == 0) && ((i == ind1) || (i == ind2))) {
                 System.out.println(pairDigits[i]);
+                continue;
             }
 
         }
@@ -73,6 +77,22 @@ public class MemoryGame {
     public static boolean isGameOver(int[] opened)
     {
         return;
+    }
+
+    /**
+     * process If correspondent elements are equal, change element from opened to 1. Otherwise print error message.
+     * @param opened
+     * @param ind1
+     * @param ind2
+     */
+    public static void checkPlayerGuess(int[] pairDigits, int[] opened, int ind1, int ind2)
+    {
+        if (pairDigits[ind1] == pairDigits[ind2]) {
+            opened[ind1] = 1;
+            opened[ind2] = 1;
+        } else {
+            System.out.println("No, " + pairDigits[ind1] + " and" + pairDigits[ind2] + " is not a memory pair");
+        }
     }
 }
 
