@@ -20,6 +20,8 @@ public class MemoryGame {
             /* process game*/
             checkPlayerGuess();
 
+            System.out.println();
+
             /* print an array */
             displayArray();
 
@@ -80,16 +82,23 @@ public class MemoryGame {
      */
     public static boolean isGameOver(int[] opened)
     {
-        return;
+        for (int i = 0; i < opened.length; i++) {
+            if (opened[i] != 0) {
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
      * process If correspondent elements are equal, change element from opened to 1. Otherwise print error message.
      *
+     * @param pairDigits;
      * @param opened
      * @param ind1
      * @param ind2
-     * @param pairDigits;
      */
     public static void checkPlayerGuess(int[] pairDigits, int[] opened, int ind1, int ind2)
     {
